@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentina Tereshkova — First Woman Cosmonaut</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900|Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Space background with animated stars -->
+    <canvas class="stars"></canvas>
+    <!-- Distant ships -->
+    <img src="images/spaceship1.png" class="spaceship" style="top:12vh; animation-delay:0s;">
+    <img src="images/spaceship2.png" class="spaceship" style="top:30vh; animation-delay:4s;">
+    <!-- Rocket for launch animation -->
+    <img src="images/rocket.png" class="rocket" id="mainRocket">
+
+    <div class="header">
+        <h1>Valentina Tereshkova</h1>
+        <h2>First Woman Cosmonaut</h2>
+    </div>
+    <nav class="nav">
+        <button class="nav-btn" data-section="main">Home</button>
+        <button class="nav-btn" data-section="bio">Biography</button>
+        <button class="nav-btn" data-section="flight">Space Flight</button>
+        <button class="nav-btn" data-section="impact">Impact and Achievements</button>
+        <button class="nav-btn" data-section="facts">Interesting Facts</button>
+        <button class="nav-btn" data-section="map">Travel Map</button>
+        <button class="nav-btn" data-section="family">Family</button>
+        <button class="nav-btn" data-section="gallery">Gallery</button>
+        <button class="nav-btn" data-section="game">Space Game</button>
+    </nav>
+
+    <section class="section active" id="main">
+        <h3>Welcome to the Space Journey!</h3>
+        <p>Dive into the story of the first woman cosmonaut, discover amazing facts, view photos, and play a space game!</p>
+        <!-- banner with gray background and text (add images/banner.jpg file) -->
+        <img src="images/banner1.jpg" alt="Valentina Tereshkova — first woman cosmonaut" class="main-banner">
+        <!-- additional area for inserting other photos later -->
+        <div id="mainPhotos" style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:20px;"></div>
+        <button id="launchRocket" class="nav-btn">Launch the Rocket!</button>
+        <!-- Animations, intro, sounds here -->
+    </section>
+    <section class="section" id="bio">
+        <h3>Biography</h3>
+        <p><strong>Early Years:</strong> Tereshkova was born on March 6, 1937, in the village of Bolshoe Maslennikovo on the Volga River in Yaroslavl Oblast. Her father was a tractor driver and sergeant in the Soviet Army. When the girl was only two years old, her father died during the Winter War in Finland. Her mother raised three children alone, working in the textile industry.</p>
+        <p><strong>Education and Career Before Space:</strong> Valentina finished primary school at the age of 16. She then worked at a textile factory and plant, pursued correspondence education. Her main passion was parachuting — her experience with parachute jumps became a key factor in her selection as a cosmonaut. She made her first jump on May 21, 1959, at the age of 22.</p>
+        <p><strong>Selection as Cosmonaut:</strong> In 1962, out of 400 candidates, she was selected along with four other women into the cosmonaut squad. She underwent rigorous training: centrifuge, isolation tests, water jumps, training on MiG-15 fighter jets. Her call sign during the flight was "Seagull".</p>
+    </section>
+    <section class="section" id="flight">
+        <h3>Space Flight — Vostok-6</h3>
+        <p><strong>Flight Date:</strong> On June 16, 1963, Tereshkova was launched into space on the Vostok-6 spacecraft. She became the first woman to make a space flight. Her call sign was "Seagull".</p>
+        <p><strong>Flight Parameters:</strong> The flight lasted 2 days, 22 hours, and 50 minutes. During this time, she completed 48 orbits around Earth, traveling about 1.6 million km. At the time of the flight, Tereshkova was one of the youngest — she was only 26 years old. She remains the youngest woman to have flown in space!</p>
+        <p><strong>Historical Fact:</strong> In one flight, Valentina spent more time in space than all American astronauts who flew before her combined! Her flight lasted longer than the flight of the first man in space, Yuri Gagarin.</p>
+        <p><strong>Work in Space:</strong> During the flight, Valentina conducted scientific experiments, kept a diary of observations, photographed the Earth's horizon. She spoke with Soviet Premier Nikita Khrushchev over the radio. Although the woman experienced some discomfort and nausea, she successfully completed all mission tasks.</p>
+        <p><strong>Return to Earth:</strong> She landed in Kazakhstan, 620 km northeast of Karaganda. During the parachute descent, she got a bruised nose due to strong winds but landed safely on the ground.</p>
+    </section>
+    <section class="section" id="impact">
+        <h3>Impact and Achievements</h3>
+        <ul>
+            <li>Hero of the Soviet Union (1963)</li>
+            <li>First woman cosmonaut in the world</li>
+            <li>Honorary citizen of dozens of cities worldwide</li>
+            <li>Doctor of Technical Sciences, Professor</li>
+            <li>Deputy of the Supreme Soviet of the USSR, public figure</li>
+            <li>Inspired women worldwide to pursue scientific and space achievements</li>
+        </ul>
+    </section>
+    <section class="section" id="facts">
+        <h3>Interesting Facts</h3>
+        <ul id="facts-list">
+            <li>🌟 Tereshkova completed <strong>48 orbits around Earth</strong> in one flight, more than 4 American astronauts combined!</li>
+            <li>📡 Her call sign was <strong>"Seagull"</strong> — an asteroid was named 1671 Chaika after it.</li>
+            <li>🧵 Before space, she worked as a weaver at a textile mill and was passionate about parachuting.</li>
+            <li>🌙 Her name is given to a crater on the Moon (on the far side) and an asteroid.</li>
+            <li>🚀 Her flight lasted 2 days 22 hours 50 minutes — longer than the entire flight of the first man in space, Yuri Gagarin!</li>
+            <li>👰 Five months after the flight, she married cosmonaut Andrian Nikolaev. Their daughter Elena is the first child whose both parents flew in space!</li>
+            <li>🎖️ Received the title "Hero of the Soviet Union" and numerous international awards.</li>
+            <li>🌍 Made 42 foreign visits between 1963 and 1970 — more than any other Soviet cosmonaut.</li>
+            <li>📚 After space, she graduated with honors from Zhukovsky Air Force Academy in 1969.</li>
+            <li>♻️ In 2007, she said that if she had the money, she would fly to Mars!</li>
+            <li>🇺🇳 Became an international symbol of female strength and inspired millions of women worldwide.</li>
+        </ul>
+    </section>
+    <section class="section" id="map">
+        <h3>🗺️ Valentina Tereshkova's Travel Map</h3>
+        <p>Tereshkova made 42 foreign visits between 1963 and 1970 — more than any other Soviet cosmonaut.</p>
+        <!-- add world-map.png file (or any other name) to images folder -->
+        <div id="mapContainer" style="position:relative; width:100%; /* height set via aspect ratio, change depending on image */ padding-bottom:40%; background:url('images/world-map.png') center/cover no-repeat; background-size:contain; border-radius:12px; border:2px solid #5a6aff; overflow:hidden; margin-bottom:20px; box-shadow:0 0 20px rgba(90,106,255,0.3);">
+            <!-- city points over the map -->
+            <div id="citiesOverlay" style="position:absolute; top:0; left:0; width:100%; height:100%;"></div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px;">
+            <div style="background:rgba(90,106,255,0.1); padding:12px; border-radius:8px; border-left:4px solid #ff0000;">
+                <strong style="color:#ff0000;">🔴 Moscow</strong> — birthplace (1937)
+            </div>
+            <div style="background:rgba(90,106,255,0.1); padding:12px; border-radius:8px; border-left:4px solid #ffaa00;">
+                <strong style="color:#ffaa00;">🟠 42 visits</strong> to 15+ countries (1963-1970)
+            </div>
+        </div>
+    </section>
+    <section class="section" id="family">
+        <h3>👨‍👩‍👧‍👦 Valentina Tereshkova's Family Tree</h3>
+        <div class="family-tree">
+            <!-- layer 1: parents -->
+            <div class="tree-layer layer-1">
+                <div class="tree-person parent">
+                    <div class="person-icon">👨</div>
+                    <div class="person-name">Vladimir Aksyonov</div>
+                    <div class="person-dates">1906 - 1941</div>
+                    <div class="person-role">Father</div>
+                </div>
+                <div class="tree-line">━━━━━━</div>
+                <div class="tree-person parent">
+                    <div class="person-icon">👩</div>
+                    <div class="person-name">Elena Fyodorovna</div>
+                    <div class="person-dates">1913 - 2010</div>
+                    <div class="person-role">Mother</div>
+                </div>
+            </div>
+            
+            <!-- connecting line -->
+            <div class="tree-connector">↓</div>
+            
+            <!-- layer 2: Valentina + husband -->
+            <div class="tree-layer layer-2">
+                <div class="tree-person main">
+                    <div class="person-icon">🌟</div>
+                    <div class="person-name">Valentina Vladimirovna</div>
+                    <div class="person-dates">born May 6, 1937</div>
+                    <div class="person-role">First Woman Cosmonaut</div>
+                    <div class="person-achievement">Vostok-6 • 1963</div>
+                </div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <div class="tree-line">━</div>
+                    <span style="color:#ff69b4; font-size:1.4em;">❤️</span>
+                    <div class="tree-line">━</div>
+                </div>
+                <div class="tree-person spouse">
+                    <div class="person-icon">👨</div>
+                    <div class="person-name">Andrian Nikolaev</div>
+                    <div class="person-dates">1929 - 2019</div>
+                    <div class="person-role">Husband • Cosmonaut</div>
+                    <div class="person-achievement">Vostok-3 • 1962</div>
+                </div>
+            </div>
+            
+            <!-- connecting line -->
+            <div class="tree-connector">↓</div>
+            
+            <!-- layer 3: daughter -->
+            <div class="tree-layer layer-3">
+                <div class="tree-person child">
+                    <div class="person-icon">👧</div>
+                    <div class="person-name">Elena Andriyanovna</div>
+                    <div class="person-dates">born June 8, 1964</div>
+                    <div class="person-role">Daughter</div>
+                    <div class="person-achievement">🏆 First child<br>with two cosmonaut parents</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="gallery">
+        <h3>Gallery</h3>
+        <div id="gallery-list">
+            <img src="images/tereshkova1.jpg" alt="Tereshkova in spacesuit">
+            <img src="images/tereshkova2.jpg" alt="Vostok-6 flight">
+            <img src="images/tereshkova3.jpg">
+            <img src="images/tereshkova4.jpg">
+            <img src="images/rocket.png" alt="Rocket">
+            <!-- add new photos of Valentina here, sufficient space provided -->
+        </div>
+    </section>
+    <section class="section" id="game">
+        <h3>🚀 Space Games - Tereshkova's Journey</h3>
+        <div class="game-tabs">
+            <button class="game-tab-btn active" data-game="stars">Collect Stars</button>
+            <button class="game-tab-btn" data-game="rocket">Control Rocket</button>
+        </div>
+        <!-- first game: stars -->
+        <div id="game1" class="game-panel active">
+            <div style="background:rgba(90, 106, 255, 0.1); padding:16px; border-radius:12px; margin-bottom:20px;">
+                <p style="font-size:1em; margin:8px 0;">
+                    <strong>🎮 HOW TO PLAY:</strong><br>
+                    ✨ <strong>Controls:</strong> mouse/click on stars<br>
+                    ✅ <strong>Goal:</strong> Collect all stars in 30 seconds<br>
+                    ⚠️ <strong>Restriction:</strong> stars appear randomly, but not in corners and not close to each other
+                </p>
+            </div>
+            <button id="game1StartBtn" class="nav-btn" style="margin-bottom:20px; font-size:1.1em; padding: 12px 24px;">🎮 Start Game</button>
+            <button id="game1ResetBtn" class="nav-btn" style="margin-bottom:20px; font-size:1.1em; padding: 12px 24px; display:none;">🔄 Reset</button>
+            <div style="display:flex; justify-content:space-around; margin-bottom:20px; flex-wrap:wrap;">
+                <div style="font-size:1.1em; color:#5a6aff;"><strong>⏱️ Time: <span id="game1Timer">30</span>s</strong></div>
+                <div style="font-size:1.1em; color:#00ff88;"><strong>💎 Score: <span id="game1Score">0</span></strong></div>
+            </div>
+            <div id="game1Area" style="position:relative; width:100%; height:450px; border:3px solid #5a6aff; border-radius:16px; background:rgba(10,15,44,0.8); overflow:hidden; margin-bottom:20px; box-shadow:0 0 20px #5a6aff;"></div>
+            <div id="game1Message" style="font-size:1.2em; color:#00ff88; min-height:30px; text-align:center; font-weight:bold; text-shadow:0 0 8px #5a6aff;"></div>
+        </div>
+        <!-- second game: rocket -->
+        <div id="game2" class="game-panel">
+            <div style="background:rgba(90, 106, 255, 0.1); padding:16px; border-radius:12px; margin-bottom:20px;">
+                <p style="font-size:1em; margin:8px 0;">
+                    <strong>🎮 Game 2:</strong> Control the Rocket
+                    <br>Use arrows ← → to move the rocket along the X-axis and collect crystals
+                    <br>Each collected crystal +10 points
+                </p>
+            </div>
+            <button id="game2StartBtn" class="nav-btn" style="margin-bottom:20px; font-size:1.1em; padding: 12px 24px;">🚀 Start</button>
+            <button id="game2ResetBtn" class="nav-btn" style="margin-bottom:20px; font-size:1.1em; padding: 12px 24px; display:none;">🔄 Reset</button>
+            <div style="display:flex; justify-content:space-around; margin-bottom:20px; flex-wrap:wrap;">
+                <div style="font-size:1.1em; color:#5a6aff;"><strong>⏱️ Time: <span id="game2Timer">30</span>s</strong></div>
+                <div style="font-size:1.1em; color:#00ff88;"><strong>💎 Score: <span id="game2Score">0</span></strong></div>
+            </div>
+            <div id="game2Area" style="position:relative; width:100%; height:450px; border:3px solid #5a6aff; border-radius:16px; background:rgba(10,15,44,0.8); overflow:hidden; margin-bottom:20px; box-shadow:0 0 20px #5a6aff;"></div>
+            <!-- space for photos next to crystals -->
+            <div id="game2Photos" style="display:flex; justify-content:center; gap:12px; margin-bottom:20px;"></div>
+            <div id="game2Message" style="font-size:1.2em; color:#00ff88; min-height:30px; text-align:center; font-weight:bold; text-shadow:0 0 8px #5a6aff;"></div>
+        </div>
+    </section>
+
+    <audio id="rocketSound" src="sounds/rocket.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+    <div class="creator-credit">Created by Arman Grigoryan</div>
+</body>
+</html>
